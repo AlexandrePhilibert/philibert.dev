@@ -171,17 +171,36 @@
 					</div>
 					<div class="col-span-5">
 						<h2 class="font-medium text-lg mb-1">{experience.title}</h2>
-                        <ul class="flex flex-wrap mb-1 -ml-1">
-                            {#each experience.technologies as technology}
-                                <li
-                                    class="m-1 py-0.5 px-2 font-medium rounded-lg text-cerulean-blue-800 bg-gradient-to-tr from-scooter-400 to-scooter-200 select-none"
-                                    >
-                                    {technology}
-                                </li>
-                            {/each}
-                        </ul>
+						<ul class="flex flex-wrap mb-1 -ml-1">
+							{#each experience.technologies as technology}
+								<li
+									class="m-1 py-0.5 px-2 font-medium rounded-lg text-cerulean-blue-800 bg-gradient-to-tr from-scooter-400 to-scooter-200 select-none"
+								>
+									{technology}
+								</li>
+							{/each}
+						</ul>
 						<p class="text-justify text-base/8 text-oslo-gray-300">{experience.description}</p>
-						<div class="font-medium">{experience.company.name}</div>
+						<a href={experience.company.url} class="flex items-center font-medium group space-x-2">
+							<span>
+								{experience.company.name}
+							</span>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="14"
+								height="14"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								class="text-oslo-gray-200 group-hover:inline-block hidden mb-0.5"
+								><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline
+									points="15 3 21 3 21 9"
+								/><line x1="10" x2="21" y1="14" y2="3" /></svg
+							>
+						</a>
 					</div>
 				</li>
 			{/each}
@@ -206,8 +225,8 @@
 							<h2 class="font-medium text-lg mb-2">{education.name}</h2>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
-								width="24"
-								height="24"
+								width="22"
+								height="22"
 								viewBox="0 0 24 24"
 								fill="none"
 								stroke="currentColor"
@@ -250,8 +269,8 @@
 									{#if !!project.url}
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
-											width="24"
-											height="24"
+											width="22"
+											height="22"
 											viewBox="0 0 24 24"
 											fill="none"
 											stroke="currentColor"
