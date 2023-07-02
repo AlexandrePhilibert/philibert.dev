@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+	@apply text-base text-slate-200 bg-cerulean-blue-900 bg-gradient-to-tr from-50% from-cerulean-blue-950 to-90% min-h-screen;
+}
+
+::selection {
+	@apply bg-cerulean-blue-700;
+}
+
+::-moz-seleciton {
+	@apply bg-cerulean-blue-700;
+}
