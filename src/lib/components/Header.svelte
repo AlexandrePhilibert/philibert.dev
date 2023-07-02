@@ -1,11 +1,9 @@
 <header
-	class="flex justify-between items-center sticky top-0 border-b border-b-scooter-800 px-4 py-2 backdrop-blur-md bg-cerulean-blue-900 bg-opacity-10"
->
+	class="flex justify-between items-center sticky top-0 border-b border-b-scooter-800 px-4 py-2 backdrop-blur-md bg-cerulean-blue-900 bg-opacity-10">
 	<div />
-	<menu class="flex items-center space-x-12">
-		<ol class="flex space-x-4 intems-center" />
+	<menu class="flex space-x-12 items-center">
 		<ol class="flex space-x-4 items-center">
-			<li>
+			<li class="flex">
 				<a
 					href="/rss"
 					class="inline-block hover:bg-gradient-to-tr hover:text-cerulean-blue-800 from-scooter-400 to-scooter-200 rounded-md p-1.5"
@@ -28,7 +26,7 @@
 					>
 				</a>
 			</li>
-			<li>
+			<li class="flex">
 				<a
 					href="https://www.linkedin.com/in/alexandre-philibert/"
 					class="inline-block hover:bg-gradient-to-tr hover:text-cerulean-blue-800 from-scooter-400 to-scooter-200 rounded-md p-1.5"
@@ -49,9 +47,9 @@
 					>
 				</a>
 			</li>
-			<li>
+			<li class="flex">
 				<a
-					href="https://github.com/AlexandrePhilibert"
+					href="https://github.com/alexandrephilibert"
 					class="inline-block hover:bg-gradient-to-tr hover:text-cerulean-blue-800 from-scooter-400 to-scooter-200 rounded-md p-1.5"
 				>
 					<svg

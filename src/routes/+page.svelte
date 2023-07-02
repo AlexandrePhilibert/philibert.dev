@@ -134,7 +134,7 @@
 		{
 			name: 'Bocherens Drive',
 			description:
-				"Application de suivi des heures de travail et de partage de fichiers pour les employés de l'entreprise.",
+				"Application de suivi des heures de travail, suivi des chantiers et de partage de fichiers pour les employés de l'entreprise.",
 			url: null,
 			image: '/imgs/drive_bocherens_com.png',
 			technologies: ['Laravel', 'React', 'MUI', 'NGINX']
@@ -146,6 +146,14 @@
 			url: 'https://pinceau.ch',
 			image: 'imgs/pinceau_ch.png',
 			technologies: ['Next.js', 'PostgreSQL', 'Tailwind CSS', 'NGINX']
+		},
+		{
+			name: 'Search on Google',
+			description:
+				'Prévu à la base pour ajouter un bouton "Search on Google", permet désormais la recherche à l\'aide de macros inspiré de vim.',
+			url: 'https://github.com/AlexandrePhilibert/search_on_google',
+			image: 'imgs/search_on_google.png',
+			technologies: ['JavaScript', 'Manifest V3']
 		}
 	];
 </script>
@@ -162,18 +170,18 @@
 						</span>
 					</div>
 					<div class="col-span-5">
-						<h2 class="font-medium text-lg mb-2">{experience.title}</h2>
+						<h2 class="font-medium text-lg mb-1">{experience.title}</h2>
+                        <ul class="flex flex-wrap mb-1 -ml-1">
+                            {#each experience.technologies as technology}
+                                <li
+                                    class="m-1 py-0.5 px-2 font-medium rounded-lg text-cerulean-blue-800 bg-gradient-to-tr from-scooter-400 to-scooter-200 select-none"
+                                    >
+                                    {technology}
+                                </li>
+                            {/each}
+                        </ul>
 						<p class="text-justify text-base/8 text-oslo-gray-300">{experience.description}</p>
 						<div class="font-medium">{experience.company.name}</div>
-						<ul class="flex flex-wrap mt-2 -ml-1">
-							{#each experience.technologies as technology}
-								<li
-									class="m-1 py-0.5 px-2 font-medium rounded-lg text-cerulean-blue-800 bg-gradient-to-tr from-scooter-400 to-scooter-200 select-none"
-								>
-									{technology}
-								</li>
-							{/each}
-						</ul>
 					</div>
 				</li>
 			{/each}
@@ -231,14 +239,14 @@
 						class="inline-block cursor-pointer hover:bg-cerulean-blue-900 bg-opacity-50 rounded-md border border-transparent hover:border-scooter-900 group"
 					>
 						<div class="grid grid-cols-8 grid-rows-1 space-x-6 p-3">
-							<img
-								src={project.image}
-								alt={project.name}
-								class="rounded-lg col-span-3 border border-scooter-900 row-span-1 h-full object-cover"
-							/>
+							<div
+								class="rounded-lg col-span-3 border border-scooter-900 row-span-1 h-full overflow-hidden"
+							>
+								<img src={project.image} alt={project.name} class="object-cover w-full h-full" />
+							</div>
 							<div class="col-span-5">
 								<span class="flex justify-between">
-									<h2 class="font-medium text-xl mb-2">{project.name}</h2>
+									<h2 class="font-medium text-xl mb-1">{project.name}</h2>
 									{#if !!project.url}
 										<svg
 											xmlns="http://www.w3.org/2000/svg"
@@ -262,7 +270,7 @@
 										>
 									{/if}
 								</span>
-								<ul class="flex flex-wrap my-2 -ml-1">
+								<ul class="flex flex-wrap mb-1 -ml-1">
 									{#each project.technologies as technology}
 										<li
 											class="m-1 py-0.5 px-2 font-medium rounded-lg text-cerulean-blue-800 bg-gradient-to-tr from-scooter-400 to-scooter-200 select-none"
