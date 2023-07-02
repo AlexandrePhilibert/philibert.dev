@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-	@apply text-base text-slate-200 bg-cerulean-blue-900 bg-gradient-to-tr from-50% from-cerulean-blue-950 to-90% min-h-screen;
+	@apply text-base text-slate-200 bg-cerulean-blue-900 bg-gradient-to-tr from-40% from-cerulean-blue-950 to-90% min-h-screen;
 }
 
 ::selection {
