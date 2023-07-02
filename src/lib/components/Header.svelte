@@ -6,7 +6,7 @@
 			<li class="flex">
 				<a
 					href="/rss"
-					class="inline-block hover:bg-gradient-to-tr hover:text-cerulean-blue-800 from-scooter-400 to-scooter-200 rounded-md p-1.5"
+					class="inline-block hover:bg-gradient-to-tr hover:text-cerulean-blue-800 from-scooter-400 to-scooter-200 rounded-md p-1.5 outline-none"
 				>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"

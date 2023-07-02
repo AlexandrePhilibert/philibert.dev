@@ -163,21 +163,21 @@
 </script>
 
 <div class="flex justify-center">
-	<main class="flex flex-col w-full max-w-3xl items-center space-y-10 my-6">
-		<div class="grid grid-cols-6 w-full gap-8">
-			<div class="col-start-2 col-span-5">
+	<main class="flex flex-col w-full max-w-3xl items-center space-y-10 my-6 mx-4">
+		<div class="grid grid-cols-6 w-full gap-1 md:gap-8">
+			<div class="col-span-full md:col-start-2 md:col-span-5 mb-4 md:mb-0">
 				<h2 class="text-2xl mb-2 font-medium uppercase">Expériences Professionnelles</h2>
 				<hr class="border-scooter-200 border-b" />
 			</div>
 			<ol class="contents">
 				{#each professionalExperiences as experience}
 					<li class="contents">
-						<div class="col-span-1">
+						<div class="col-span-6 md:col-span-1">
 							<span class="text-slate-400 text-sm">
 								<span>{experience.startYear}</span> - <span>{experience.endYear ?? 'Actuel.'}</span>
 							</span>
 						</div>
-						<div class="col-span-5">
+						<div class="col-span-6 md:col-span-5 mb-8 md:mb-0">
 							<h2 class="font-medium text-lg mb-1">{experience.title}</h2>
 							<ul class="flex flex-wrap mb-1.5 -ml-1">
 								{#each experience.technologies as technology}
@@ -220,22 +220,22 @@
 			</ol>
 		</div>
 
-		<div class="grid grid-cols-6 gap-8 w-full">
-			<div class="col-start-2 col-span-5">
+		<div class="grid grid-cols-6 gap-1 md:gap-8 w-full">
+			<div class="col-span-full md:col-start-2 md:col-span-5">
 				<h2 class="text-2xl mb-2 font-medium uppercase">Formations</h2>
 				<hr class="border-scooter-200 border-b" />
 			</div>
 			<ol class="contents">
 				{#each educations as education}
 					<li class="contents">
-						<div class="col-span-1 pt-2.5">
+						<div class="col-span-full md:col-span-1 pt-2.5">
 							<span class="text-slate-400 text-sm">
 								<span>{education.startYear}</span> - <span>{education.endYear}</span>
 							</span>
 						</div>
 						<a
 							href={education.url}
-							class="col-span-5 px-3 py-2 -mx-3 -my-2 cursor-pointer hover:bg-cerulean-blue-900 bg-opacity-50 rounded-md border border-transparent hover:border-scooter-900 group"
+							class="col-span-full md:col-span-5 px-3 py-2 -mx-3 -my-2 cursor-pointer hover:bg-cerulean-blue-900 bg-opacity-50 rounded-md border border-transparent hover:border-scooter-900 group mb-8 md:mb-0"
 						>
 							<span class="flex justify-between">
 								<h2 class="font-medium text-lg mb-2">{education.name}</h2>
@@ -249,7 +249,7 @@
 									stroke-width="2"
 									stroke-linecap="round"
 									stroke-linejoin="round"
-									class="text-oslo-gray-200 group-hover:inline-block hidden"
+									class="text-oslo-gray-200 group-hover:visible invisible"
 									><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" /><polyline
 										points="15 3 21 3 21 9"
 									/><line x1="10" x2="21" y1="14" y2="3" /></svg
@@ -263,26 +263,26 @@
 		</div>
 
 		<div class="grid grid-cols-6 gap-8 w-full">
-			<div class="col-start-2 col-span-5">
-				<h2 class="col-span-6 text-2xl mb-2 font-medium uppercase">Projets</h2>
+			<div class="col-span-full md:col-start-2 md:col-span-5">
+				<h2 class="text-2xl mb-2 font-medium uppercase">Projets</h2>
 				<hr class="border-scooter-200 border-b" />
 			</div>
 			<ol class="contents">
 				{#each projects as project}
-					<li class="col-start-2 col-span-5">
+					<li class="col-span-full md:col-start-2 md:col-span-5">
 						<ConditionalWrapper
 							tag="a"
 							wrap={!!project.url}
 							href={project.url}
-							class="inline-block cursor-pointer hover:bg-cerulean-blue-900 bg-opacity-50 rounded-md border border-transparent hover:border-scooter-900 group"
+							class="flex cursor-pointer hover:bg-cerulean-blue-900 bg-opacity-50 rounded-md border border-transparent hover:border-scooter-900 group"
 						>
-							<div class="grid grid-cols-8 grid-rows-1 space-x-6 p-3">
+							<div class="flex-1 grid grid-cols-8 p-1 md:p-3">
 								<div
-									class="rounded-lg col-span-3 border border-scooter-900 row-span-1 h-full overflow-hidden"
+									class="rounded-lg col-span-3 border border-scooter-900 row-span-1 h-full overflow-hidden hidden md:inline-block md:mr-6"
 								>
 									<img src={project.image} alt={project.name} class="object-cover w-full h-full" />
 								</div>
-								<div class="col-span-5">
+								<div class="col-span-full md:col-span-5">
 									<span class="flex justify-between">
 										<h2 class="font-medium text-xl mb-1.5">{project.name}</h2>
 										{#if !!project.url}
