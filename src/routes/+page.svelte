@@ -162,6 +162,10 @@
 	];
 </script>
 
+<svelte:head>
+    <title>Alexandre Philibert</title>
+</svelte:head>
+
 <div class="flex justify-center">
 	<main class="flex flex-col w-full max-w-3xl items-center space-y-10 my-6 mx-4">
 		<div class="grid grid-cols-6 w-full gap-1 md:gap-8">
@@ -172,7 +176,7 @@
 			<ol class="contents">
 				{#each professionalExperiences as experience}
 					<li class="contents">
-						<div class="col-span-6 md:col-span-1">
+						<div class="col-span-6 md:col-span-1 md:text-right">
 							<span class="text-slate-400 text-sm">
 								<span>{experience.startYear}</span> - <span>{experience.endYear ?? 'Actuel.'}</span>
 							</span>
