@@ -1,165 +1,9 @@
 <script lang="ts">
 	import ConditionalWrapper from '$lib/components/ConditionalWrapper.svelte';
 
-	type ProfessionalExperience = {
-		title: string;
-		description: string[];
-		technologies: string[];
-		company: {
-			name: string;
-			url: string;
-		};
-		startYear: number;
-		endYear: number | null;
-	};
-
-	type Education = {
-		name: string;
-		school: {
-			name: string;
-		};
-		url: string;
-		startYear: number;
-		endYear: number | null;
-	};
-
-	type Project = {
-		name: string;
-		description: string;
-		url: string | null;
-		image: string;
-		technologies: string[];
-	};
-
-	const professionalExperiences: ProfessionalExperience[] = [
-		{
-			title: 'Développeur logiciel',
-			description: [
-				'Développement de nouvelles fonctionnalités sur la plateforme IntrepidKnowledge.'
-			],
-			technologies: ['React', 'NestJS', 'CSS', 'Terraform', 'Ansible', 'OpenStack'],
-			company: {
-				name: 'WorkStreams',
-				url: 'https://workstreams.ch'
-			},
-			startYear: 2023,
-			endYear: null
-		},
-		{
-			title: 'Travail de diplôme Technicien ES',
-			description: [
-				"Projet de migration de l'API PHP d'IntrepidKnowledge vers Node.js. Début de la migration de la partie authentification, envoi d'email et permissions."
-			],
-			technologies: ['Node.js', 'NestJS', 'OAuth2'],
-			company: {
-				name: 'WorkStreams',
-				url: 'https://workstreams.ch'
-			},
-			startYear: 2022,
-			endYear: 2022
-		},
-		{
-			title: 'Stage à WorkStreams',
-			description: ['Migration du frontend de la plateforme IntrepidKnowledge vers React.'],
-			technologies: ['React', 'TypeScrit', 'CSS', 'React-Query'],
-			company: {
-				name: 'WorkStreams',
-				url: 'https://workstreams.ch'
-			},
-			startYear: 2021,
-			endYear: 2022
-		},
-		{
-			title: 'Informaticien CFC à WorkStreams',
-			description: [
-				'Implémentation de nouvelles fonctionnalités sur la plateforme IntrepidKnowledge.'
-			],
-			technologies: ['Javascript', 'PHP', 'CSS'],
-			company: {
-				name: 'WorkStreams',
-				url: 'https://workstreams.ch'
-			},
-			startYear: 2019,
-			endYear: 2020
-		},
-		{
-			title: 'Stage à Nagravision',
-			description: [
-				'Analyse de spécification et implémentation de processus de commandes interne.'
-			],
-			technologies: ['Nintex', 'K2'],
-			company: {
-				name: 'Nagravision',
-				url: 'https://www.nagra.com/'
-			},
-			startYear: 2018,
-			endYear: 2018
-		}
-	];
-
-	const educations: Education[] = [
-		{
-			name: 'Bachelor HES en Informatique locielle en emploi',
-			school: {
-				name: 'HEIG-VD'
-			},
-			url: 'https://heig-vd.ch',
-			startYear: 2022,
-			endYear: 2026
-		},
-		{
-			name: "Techicien ES en développement d'applications",
-			school: {
-				name: 'CPNV'
-			},
-			url: 'https://www.cpnv.ch',
-			startYear: 2020,
-			endYear: 2022
-		},
-		{
-			name: "CFC d'informaticien généraliste",
-			school: {
-				name: 'CPNV'
-			},
-			url: 'https://www.cpnv.ch',
-			startYear: 2015,
-			endYear: 2019
-		}
-	];
-
-	const projects: Project[] = [
-		{
-			name: 'philibert.dev',
-			description: 'Ce site, premier projet en SvelteKit.',
-			url: 'https://philibert.dev',
-			image: 'imgs/philibert_dev.png',
-			technologies: ['SvelteKit', 'Tailwind CSS']
-		},
-		{
-			name: 'Bocherens Drive',
-			description:
-				"Application de suivi des heures de travail, suivi des chantiers et de partage de fichiers pour les employés de l'entreprise.",
-			url: null,
-			image: '/imgs/drive_bocherens_com.png',
-			technologies: ['Laravel', 'React', 'TypeScript', 'MUI', 'NGINX']
-		},
-		{
-			name: 'pinceau.ch',
-			description:
-				"Projet consistant à permettre l'accès au catalogue d'articles aux clients professionnels. Les articles sont récupérés depuis l'API de l'ERP utilisé en interne.",
-			url: 'https://pinceau.ch',
-			image: 'imgs/pinceau_ch.png',
-			technologies: ['Next.js', 'PostgreSQL', 'Tailwind CSS', 'NGINX']
-		},
-		{
-			name: 'Search on Google',
-			description:
-				'Prévu à la base pour ajouter un bouton "Search on Google", permet désormais la recherche à l\'aide de macros inspiré de vim.',
-			url: 'https://github.com/AlexandrePhilibert/search_on_google',
-			image: 'imgs/search_on_google.png',
-			technologies: ['JavaScript', 'Manifest V3']
-		}
-	];
+    import experiences from '$lib/data/experiences.json';
+    import schools from '$lib/data/schools.json';
+    import projects from '$lib/data/projects.json';
 </script>
 
 <svelte:head>
@@ -174,7 +18,7 @@
 				<hr class="border-scooter-200 border-b" />
 			</div>
 			<ol class="contents">
-				{#each professionalExperiences as experience}
+				{#each experiences as experience}
 					<li class="contents">
 						<div class="col-span-6 md:col-span-1 md:text-right">
 							<span class="text-slate-400 text-sm">
@@ -230,19 +74,19 @@
 				<hr class="border-scooter-200 border-b" />
 			</div>
 			<ol class="contents">
-				{#each educations as education}
+				{#each schools as school}
 					<li class="contents">
 						<div class="col-span-full md:col-span-1 pt-2.5">
 							<span class="text-slate-400 text-sm">
-								<span>{education.startYear}</span> - <span>{education.endYear}</span>
+								<span>{school.startYear}</span> - <span>{school.endYear}</span>
 							</span>
 						</div>
 						<a
-							href={education.url}
+							href={school.url}
 							class="col-span-full md:col-span-5 px-3 py-2 -mx-3 -my-2 cursor-pointer hover:bg-cerulean-blue-900 bg-opacity-50 rounded-md border border-transparent hover:border-scooter-900 group mb-8 md:mb-0"
 						>
 							<span class="flex justify-between">
-								<h2 class="font-medium text-lg mb-2">{education.name}</h2>
+								<h2 class="font-medium text-lg mb-2">{school.name}</h2>
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
 									width="22"
@@ -259,7 +103,7 @@
 									/><line x1="10" x2="21" y1="14" y2="3" /></svg
 								>
 							</span>
-							<div class="font-medium">{education.school.name}</div>
+							<div class="font-medium">{school.school.name}</div>
 						</a>
 					</li>
 				{/each}

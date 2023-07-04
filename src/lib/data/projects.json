@@ -1,0 +1,30 @@
+[
+	{
+		"name": "philibert.dev",
+		"description": "Ce site, premier projet en SvelteKit.",
+		"url": "https://philibert.dev",
+		"image": "imgs/philibert_dev.png",
+		"technologies": ["SvelteKit", "Tailwind CSS"]
+	},
+	{
+		"name": "Bocherens Drive",
+		"description": "Application de suivi des heures de travail, suivi des chantiers et de partage de fichiers pour les employés de l'entreprise.",
+		"url": null,
+		"image": "/imgs/drive_bocherens_com.png",
+		"technologies": ["Laravel", "React", "TypeScript", "MUI", "NGINX"]
+	},
+	{
+		"name": "pinceau.ch",
+		"description": "Projet consistant à permettre l'accès au catalogue d'articles aux clients professionnels. Les articles sont récupérés depuis l'API de l'ERP utilisé en interne.",
+		"url": "https://pinceau.ch",
+		"image": "imgs/pinceau_ch.png",
+		"technologies": ["Next.js", "PostgreSQL", "Tailwind CSS", "NGINX"]
+	},
+	{
+		"name": "Search on Google",
+		"description": "Prévu à la base pour ajouter un bouton \"Search on Google\", permet désormais la recherche à l'aide de macros inspiré de vim.",
+		"url": "https://github.com/AlexandrePhilibert/search_on_google",
+		"image": "imgs/search_on_google.png",
+		"technologies": ["JavaScript", "Manifest V3"]
+	}
+]

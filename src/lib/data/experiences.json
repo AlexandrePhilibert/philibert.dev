@@ -1,0 +1,65 @@
+[
+	{
+		"title": "Développeur logiciel",
+		"description": [
+			"Développement de nouvelles fonctionnalités sur la plateforme IntrepidKnowledge."
+		],
+		"technologies": ["React", "NestJS", "CSS", "Terraform", "Ansible", "OpenStack"],
+		"company": {
+			"name": "WorkStreams",
+			"url": "https://workstreams.ch"
+		},
+		"startYear": 2023,
+		"endYear": null
+	},
+	{
+		"title": "Travail de diplôme Technicien ES",
+		"description": [
+			"Projet de migration de l'API PHP d'IntrepidKnowledge vers Node.js. Début de la migration de la partie authentification, envoi d'email et permissions."
+		],
+		"technologies": ["Node.js", "NestJS", "OAuth2"],
+		"company": {
+			"name": "WorkStreams",
+			"url": "https://workstreams.ch"
+		},
+		"startYear": 2022,
+		"endYear": 2022
+	},
+	{
+		"title": "Stage à WorkStreams",
+		"description": ["Migration du frontend de la plateforme IntrepidKnowledge vers React."],
+		"technologies": ["React", "TypeScrit", "CSS", "React-Query"],
+		"company": {
+			"name": "WorkStreams",
+			"url": "https://workstreams.ch"
+		},
+		"startYear": 2021,
+		"endYear": 2022
+	},
+	{
+		"title": "Informaticien CFC à WorkStreams",
+		"description": [
+			"Implémentation de nouvelles fonctionnalités sur la plateforme IntrepidKnowledge."
+		],
+		"technologies": ["Javascript", "PHP", "CSS"],
+		"company": {
+			"name": "WorkStreams",
+			"url": "https://workstreams.ch"
+		},
+		"startYear": 2019,
+		"endYear": 2020
+	},
+	{
+		"title": "Stage à Nagravision",
+		"description": [
+			"Analyse de spécification et implémentation de processus de commandes interne."
+		],
+		"technologies": ["Nintex", "K2"],
+		"company": {
+			"name": "Nagravision",
+			"url": "https://www.nagra.com/"
+		},
+		"startYear": 2018,
+		"endYear": 2018
+	}
+]
